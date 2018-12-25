@@ -15,18 +15,22 @@ public class ProdottoFisico extends Prodotto {
     /**
      * Costruttore
      *
-     * @param id
      * @param disponibile
      * @param nome
      * @param prezzo
      * @param numeroPezziDisponibili
      */
-    public ProdottoFisico(String id, boolean disponibile, String nome, double prezzo, int numeroPezziDisponibili) {
+    public ProdottoFisico(boolean disponibile, String nome, double prezzo, int numeroPezziDisponibili) {
         setId(id);
         setDisponibile(disponibile);
         setNome(nome);
         setPrezzo(prezzo);
         setNumeroPezziDisponibili(numeroPezziDisponibili);
+    }
+
+    @Override
+    public String toString() {
+        return "ProdottoFisico{" + "nome=" + nome + ", prezzo=" + prezzo + ", disponibile=" + disponibile + ", numeroPezziDisponibili=" + numeroPezziDisponibili + '}';
     }
 
     /**
@@ -125,6 +129,15 @@ public class ProdottoFisico extends Prodotto {
      */
     public void setNumeroPezziDisponibili(int numeroPezziDisponibili) {
         this.numeroPezziDisponibili = numeroPezziDisponibili;
+    }
+
+    /**
+     * Setter
+     *
+     * @param id
+     */
+    public void setId(int id) {
+        this.id = Integer.toString(id);
     }
 
 }

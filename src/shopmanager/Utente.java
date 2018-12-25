@@ -12,7 +12,7 @@ public class Utente extends Persona{
     private String username;
     private String password;
     private ListaProdottiFisici carrello;
-    private String tipo;
+    private String tipo = "Normale";
 
     
 
@@ -33,7 +33,24 @@ public class Utente extends Persona{
         setIndirizzo(indirizzo);
         setUsername(username);
         setPassword(password);
+        
     }
+
+    /**
+     *  Costruttore
+     *
+     * @param nome
+     * @param cognome
+     * @param username
+     * @param password
+     */
+    public Utente(String nome, String cognome, String username, String password) {
+        setNome(nome);
+        setCognome(cognome);
+        setPassword(password);
+        setUsername(username);
+    }
+    
 
     /**
      * Costruttore
