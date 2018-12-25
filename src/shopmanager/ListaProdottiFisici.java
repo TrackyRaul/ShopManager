@@ -3,6 +3,7 @@ package shopmanager;
 import java.util.ArrayList;
 
 /**
+ * Classe racoglitrice per gli oggetti di tipo ProdottoFisico
  *
  * @author Raul Farkas
  */
@@ -20,8 +21,6 @@ public class ListaProdottiFisici {
         setNome(nome);
         setProdotti(new ArrayList());
     }
-    
-    
 
     @Override
     public String toString() {
@@ -33,17 +32,23 @@ public class ListaProdottiFisici {
 
         return stringa;
     }
-    public void svuota(){
+
+    /**
+     * Svuota l'ArrayList di prodotti
+     */
+    public void svuota() {
         getProdotti().clear();
     }
+
     /**
      * Rimuovi un prodotto dal carrello
-     * 
+     *
      * @param nome
      */
-    public void rimuoviProdotto(String nome){
+    public void rimuoviProdotto(String nome) {
         getProdotti().remove(getProdottoByNome(nome));
     }
+
     /**
      * Aggiungi un prodotto fisico
      *
@@ -58,12 +63,12 @@ public class ListaProdottiFisici {
             }
 
         }
-        if(aggiungibile){
+        if (aggiungibile) {
             getProdotti().add(prodotto);
-            ((ProdottoFisico)getProdotti().get(getProdotti().size()-1)).setId(getProdotti().indexOf(prodotto));
-        }else{
+            ((ProdottoFisico) getProdotti().get(getProdotti().size() - 1)).setId(getProdotti().indexOf(prodotto));
+        } else {
             throw new IllegalArgumentException("Questo prodotto esiste gia!");
-            
+
         }
 
     }
@@ -84,7 +89,7 @@ public class ListaProdottiFisici {
         }
         return prodotto;
     }
-    
+
     /**
      * Cerca prodotti in base a quanto simile e il nome
      *
@@ -95,13 +100,14 @@ public class ListaProdottiFisici {
         ArrayList a = new ArrayList();
         for (int i = 0; i < getProdotti().size(); i++) {
             String temp = (((ProdottoFisico) getProdotti().get(i)).getNome());
-            if (temp.contains(nome)){
+            if (temp.contains(nome)) {
                 a.add((ProdottoFisico) getProdotti().get(i));
             }
 
         }
         return a;
     }
+
     /**
      * Cerca prodotto in base al nome
      *
@@ -138,6 +144,7 @@ public class ListaProdottiFisici {
     }
 
     /**
+     * Getter
      *
      * @return
      */
@@ -145,6 +152,11 @@ public class ListaProdottiFisici {
         return prodotti;
     }
 
+    /**
+     * Setter
+     *
+     * @param prodotti
+     */
     private void setProdotti(ArrayList prodotti) {
         this.prodotti = prodotti;
     }

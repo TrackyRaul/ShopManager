@@ -1,10 +1,12 @@
 package shopmanager;
 
 /**
+ * Classe di tipo utente che contiene tutte le informazione dell'utente
  *
  * @author Raul Farkas
  */
-public class Utente extends Persona{
+public class Utente extends Persona {
+
     private String nome;
     private String cognome;
     private int eta;
@@ -14,11 +16,9 @@ public class Utente extends Persona{
     private ListaProdottiFisici carrello;
     private String tipo = "Normale";
 
-    
-
     /**
      * Costruttore
-     * 
+     *
      * @param nome
      * @param cognome
      * @param eta
@@ -33,11 +33,11 @@ public class Utente extends Persona{
         setIndirizzo(indirizzo);
         setUsername(username);
         setPassword(password);
-        
+
     }
 
     /**
-     *  Costruttore
+     * Costruttore
      *
      * @param nome
      * @param cognome
@@ -50,11 +50,10 @@ public class Utente extends Persona{
         setPassword(password);
         setUsername(username);
     }
-    
 
     /**
      * Costruttore
-     * 
+     *
      * @param username
      * @param password
      */
@@ -62,46 +61,45 @@ public class Utente extends Persona{
         setUsername(username);
         setPassword(password);
     }
-    
+
     /**
+     * Aggiungi informazioni extra riguardo all'utente
      *
      * @param nome
      * @param cognome
      * @param eta
      * @param indirizzo
      */
-    public void impostaDatiPersonali(String nome, String cognome, int eta, String indirizzo){
+    public void impostaDatiPersonali(String nome, String cognome, int eta, String indirizzo) {
         setNome(nome);
         setCognome(cognome);
         setEta(eta);
         setIndirizzo(indirizzo);
     }
-    
-    
-    
+
     /**
      * Getter
-     * 
+     *
      * @return nome
      */
     @Override
     public String getNome() {
         return nome;
     }
-    
+
     /**
      * Setter
-     * 
+     *
      * @param nome
      */
     @Override
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+
     /**
      * Getter
-     * 
+     *
      * @return cognome
      */
     @Override
@@ -111,7 +109,7 @@ public class Utente extends Persona{
 
     /**
      * Setter
-     * 
+     *
      * @param cognome
      */
     @Override
@@ -121,37 +119,37 @@ public class Utente extends Persona{
 
     /**
      * Getter
-     * 
+     *
      * @return eta
      */
     @Override
     public int getEta() {
         return eta;
     }
-    
+
     /**
      * Setter
-     * 
+     *
      * @param eta
      */
     @Override
     public void setEta(int eta) {
         this.eta = eta;
     }
-    
+
     /**
      * Getter
-     * 
+     *
      * @return indirizzo
      */
     @Override
     public String getIndirizzo() {
         return indirizzo;
     }
-    
+
     /**
      * Setter
-     * 
+     *
      * @param indirizzo
      */
     @Override
@@ -161,7 +159,7 @@ public class Utente extends Persona{
 
     /**
      * Getter
-     * 
+     *
      * @return username
      */
     public String getUsername() {
@@ -170,7 +168,7 @@ public class Utente extends Persona{
 
     /**
      * Setter
-     * 
+     *
      * @param username
      */
     public void setUsername(String username) {
@@ -179,7 +177,7 @@ public class Utente extends Persona{
 
     /**
      * Getter
-     * 
+     *
      * @return password
      */
     public String getPassword() {
@@ -188,24 +186,25 @@ public class Utente extends Persona{
 
     /**
      * Setter
-     * 
+     *
      * @param password
      */
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
     /**
      * Ritorna il carrello
+     *
      * @return
      */
     public ListaProdottiFisici getCarrello() {
         return carrello;
     }
-    
+
     /**
      * Getter
-     * 
+     *
      * @return tipo
      */
     public String getTipo() {
@@ -214,13 +213,11 @@ public class Utente extends Persona{
 
     /**
      * Setter
-     * 
+     *
      * @param tipo
      */
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    
-    
-    
+
 }

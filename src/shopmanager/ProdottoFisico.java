@@ -1,7 +1,8 @@
 package shopmanager;
 
 /**
- *
+ * Classe che eredita da prodotto e che permette di creare un prodotto fisico con tutte le sue caratteristiche
+ * 
  * @author Raul Farkas
  */
 public class ProdottoFisico extends Prodotto {

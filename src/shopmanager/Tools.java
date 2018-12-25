@@ -3,7 +3,8 @@ package shopmanager;
 import java.util.Scanner;
 
 /**
- *
+ * Classe con metodi statici generici
+ * 
  * @author Raul Farkas
  */
 public class Tools {

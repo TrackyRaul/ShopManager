@@ -3,6 +3,7 @@ package shopmanager;
 import java.util.ArrayList;
 
 /**
+ * Classe racoglitrice per gli oggetti di tipo Utente
  *
  * @author Raul Farkas
  */
@@ -33,6 +34,12 @@ public class ListaUtenti {
 
     }
 
+    /**
+     * Ritorna l'utente se esiste in base al nome
+     *
+     * @param nome
+     * @return
+     */
     public Utente getUtenteByNome(String nome) {
         Utente u = null;
         if (esisteUtente(nome) == true) {
