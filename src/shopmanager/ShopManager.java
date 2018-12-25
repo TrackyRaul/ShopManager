@@ -69,9 +69,9 @@ public class ShopManager {
                                 utenteIn = utente;
                                 Tools.print("Ciao " + utenteIn.getNome() + "!");
                                 if (utenteIn.getTipo() == "Normale") {
-                                    Tools.println("Comandi: /mostraprodotti, /cercaprodotto, /aggingialcarrello, /mostracarrello");
+                                    Tools.println("Comandi: /mostraprodotti, /cercaprodotto, /aggingialcarrello, /mostracarrello, /cancelladalcarrello, /svuotacarrello, /acquista, /logout");
                                 } else if (utenteIn.getTipo() == "Admin") {
-                                    Tools.println("\nComandi: /aggiungiprodotto, /mostraprodotti, /cercaprodotto /eliminaprodotto");
+                                    Tools.println("\nComandi: /aggiungiprodotto, /mostraprodotti, /cercaprodotto, /aggingialcarrello, /mostracarrello, /eliminaprodotto, /cancellaprodotto, /cancelladalcarrello, /svuotacarrello, /svuotaprodotti, /acquista, /logout");
                                 }
 
                             } else {
@@ -120,7 +120,7 @@ public class ShopManager {
                         Tools.println("Devi prima entrare con username e passwords!");
                     }
                     break;
-                case "/aggingialcarrello":
+                case "/aggiungialcarrello":
                     if (utenteIn != null) {
                         nomeProdotto = Tools.input("Inserisci il nome del prodotto: ");
                         prodotto = lp.getProdottoByNome(nomeProdotto);
@@ -173,7 +173,7 @@ public class ShopManager {
                         for (int i = 0; i < carrello.getProdotti().size(); i++) {
                             somma += ((ProdottoFisico) carrello.getProdotti().get(i)).getPrezzo();
                         }
-                        Tools.println(Double.toString(somma));
+                        Tools.println("Totale euro: " + Double.toString(somma));
                         boolean conferma = Boolean.parseBoolean(Tools.input("Sei sicuro di voler acquistare?(true o false): "));
                         if (conferma) {
                             Tools.println("Prodotti acquistati!");
@@ -183,11 +183,13 @@ public class ShopManager {
                         }
 
                     }
+                    break;
                 case "/logout":
                     if (utenteIn != null) {
                         utenteIn = null;
                         Tools.println("Utente scollegato!");
                     }
+                    break;
                 default:
                     Tools.println("Errore, comando non riconosciuto!");
                     break;
