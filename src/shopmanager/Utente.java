@@ -70,9 +70,7 @@ public class Utente extends Persona {
      * @param eta
      * @param indirizzo
      */
-    public void impostaDatiPersonali(String nome, String cognome, int eta, String indirizzo) {
-        setNome(nome);
-        setCognome(cognome);
+    public void impostaDatiPersonali(int eta, String indirizzo) {
         setEta(eta);
         setIndirizzo(indirizzo);
     }

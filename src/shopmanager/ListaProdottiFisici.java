@@ -63,6 +63,7 @@ public class ListaProdottiFisici {
             }
 
         }
+        // Controlla se il prodotto si puo aggiungere
         if (aggiungibile) {
             getProdotti().add(prodotto);
             ((ProdottoFisico) getProdotti().get(getProdotti().size() - 1)).setId(getProdotti().indexOf(prodotto));
@@ -99,8 +100,9 @@ public class ListaProdottiFisici {
     public ArrayList getProdottiByNome(String nome) {
         ArrayList a = new ArrayList();
         for (int i = 0; i < getProdotti().size(); i++) {
-            String temp = (((ProdottoFisico) getProdotti().get(i)).getNome());
-            if (temp.contains(nome)) {
+            String temp = (((ProdottoFisico) getProdotti().get(i)).getNome()).toLowerCase();
+            // Confronta i prodotti e trova quello simile
+            if (temp.contains(nome.toLowerCase())) {
                 a.add((ProdottoFisico) getProdotti().get(i));
             }
 
