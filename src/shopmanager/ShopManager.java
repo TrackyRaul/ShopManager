@@ -4,7 +4,9 @@ import java.io.Console;
 import java.util.ArrayList;
 
 /**
- *
+ * Classe main
+ * Repository GitHub: https://github.com/TrackyRaul/ShopManager
+ * 
  * @author Raul Farkas
  */
 public class ShopManager {
