@@ -1,5 +1,5 @@
 # ShopManager
-### Author: Raul Farka
+### Author: Raul Farkas
 ---
 #### Questo programma contiene tutte le funzionalità di base
 * Puoi gestire utenti
